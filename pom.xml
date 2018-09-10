@@ -438,6 +438,26 @@
                 </configuration>
             </plugin>
 
+            <plugin>
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+                <version>1.5.1</version>
+                <executions>
+                    <execution>
+                        <id>default-deploy</id>
+                        <phase>deploy</phase>
+                        <goals>
+                            <goal>deploy</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <serverId>localNexus</serverId>
+                    <nexusUrl>http://ec2-18-185-118-17.eu-central-1.compute.amazonaws.com:9080/</nexusUrl>
+                    <skipStaging>true</skipStaging>
+                </configuration>
+            </plugin>
+
         </plugins>
     </build>
     <reporting>
@@ -526,6 +546,12 @@
             <url>http://repo.spring.io/milestone</url>
         </repository>
     </repositories>
+    <distributionManagement>
+        <snapshotRepository>
+            <id>localNexus</id>
+            <url>http://ec2-18-185-118-17.eu-central-1.compute.amazonaws.com:9080/repository/Snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
 
     <url>demopetclinic</url>
 </project>
