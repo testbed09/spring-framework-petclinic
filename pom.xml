@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.springframework.samples</groupId>
     <artifactId>spring-petclinic</artifactId>
-    <version>5.1.4</version>
+    <version>5.2.2</version>
 
     <name>petclinic</name>
     <packaging>war</packaging>
@@ -476,7 +476,7 @@
                     <username>USERNAME_FOR_A_GIT_USER</username>
                     <password>PASSWORD_FOR_A_GIT_USER</password>
                     <noDeploy>true</noDeploy>
-                    <squash>true</squash>
+                    <squash>false</squash>
                     <scmCommentPrefix>[RELEASE] </scmCommentPrefix>
                 </configuration>
             </plugin>
