@@ -453,7 +453,7 @@
                 </executions>
                 <configuration>
                     <serverId>localNexus</serverId>
-                    <nexusUrl>http://ec2-18-185-118-17.eu-central-1.compute.amazonaws.com:9080/</nexusUrl>
+                    <nexusUrl>http://ec2-54-93-56-29.eu-central-1.compute.amazonaws.com:9080/</nexusUrl>
                     <skipStaging>true</skipStaging>
                 </configuration>
             </plugin>
@@ -571,8 +571,12 @@
     <distributionManagement>
         <snapshotRepository>
             <id>localNexus</id>
-            <url>http://ec2-18-185-118-17.eu-central-1.compute.amazonaws.com:9080/repository/Snapshots/</url>
+            <url>http://ec2-54-93-56-29.eu-central-1.compute.amazonaws.com:9080/repository/petclinic_snapshots/</url>
         </snapshotRepository>
+        <repository>
+            <id>localNexus2</id>
+            <url>http://ec2-54-93-56-29.eu-central-1.compute.amazonaws.com:9080/repository/petclinic_releases/</url>
+        </repository>
     </distributionManagement>
 
     <url>demopetclinic</url>
