@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.springframework.samples</groupId>
     <artifactId>spring-petclinic</artifactId>
-    <version>5.1.2</version>
+    <version>5.1.4</version>
 
     <name>petclinic</name>
     <packaging>war</packaging>
@@ -41,11 +41,13 @@
         <postgresql-driver.version>9.4.1211.jre7</postgresql-driver.version>
 
         <jacoco.version>0.8.1</jacoco.version>
+        <maven.javadoc.skip>true</maven.javadoc.skip>
     </properties>
 
     <scm>
         <developerConnection>scm:git:https://github.com/testbed09/spring-framework-petclinic</developerConnection>
-    </scm>
+      <tag>HEAD</tag>
+  </scm>
 
     <dependencyManagement>
         <!-- Import the maven Spring IO Platform Bill Of Materials (BOM) -->
@@ -452,7 +454,7 @@
                 </executions>
                 <configuration>
                     <serverId>localNexus</serverId>
-                    <nexusUrl>http://ec2-18-185-118-17.eu-central-1.compute.amazonaws.com:9080/</nexusUrl>
+                    <nexusUrl>http://ec2-54-93-56-29.eu-central-1.compute.amazonaws.com:9080/</nexusUrl>
                     <skipStaging>true</skipStaging>
                 </configuration>
             </plugin>
@@ -570,8 +572,12 @@
     <distributionManagement>
         <snapshotRepository>
             <id>localNexus</id>
-            <url>http://ec2-18-185-118-17.eu-central-1.compute.amazonaws.com:9080/repository/Snapshots/</url>
+            <url>http://ec2-54-93-56-29.eu-central-1.compute.amazonaws.com:9080/repository/petclinic_snapshots/</url>
         </snapshotRepository>
+        <repository>
+            <id>localNexus2</id>
+            <url>http://ec2-54-93-56-29.eu-central-1.compute.amazonaws.com:9080/repository/petclinic_releases/</url>
+        </repository>
     </distributionManagement>
 
     <url>demopetclinic</url>
