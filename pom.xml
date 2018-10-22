@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.springframework.samples</groupId>
     <artifactId>spring-petclinic</artifactId>
-    <version>5.2.3</version>
+    <version>5.2.4-SNAPSHOT</version>
 
     <name>petclinic</name>
     <packaging>war</packaging>
@@ -46,7 +46,7 @@
 
     <scm>
         <developerConnection>scm:git:https://github.com/testbed09/spring-framework-petclinic</developerConnection>
-      <tag>spring-petclinic-5.2.3</tag>
+      <tag>HEAD</tag>
   </scm>
 
     <dependencyManagement>
